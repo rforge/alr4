@@ -1,0 +1,66 @@
+---
+title: "Stat 5302 Homework Assignment XX"
+author: "I. M. Student"
+output: html_document
+---
+`r date()`
+
+```{r include=FALSE}
+# include this code chunk as-is to set options
+knitr::opts_chunk$set(comment=NA, prompt=TRUE, fig_height=8, fig_width=8) 
+library(alr4)
+```
+
+Problem Dx.x
+------------
+
+Say what you're going to do.  Then, do it!  
+
+Paragraphs are separated by blank lines.  List of items start with an asterisk:
+
+*  This is an item
+
+*  So is this
+
+The next line in the file introduces some R commands that produce the output you want in your homework.  For homework you want to show both the input commands and the output from R, and this is the default behavior.
+
+```{r}
+summary(Heights)
+```
+
+You can draw graphs.
+```{r fig.width=7, fig.height=6}
+plot(dheight ~ mheight, data = Heights, main="Pearson's Heights Data")
+```
+
+You can draw two graphs side-by-side using
+```{r fig.width=7, fig.height=4}
+par(mfrow=c(1, 2))
+plot(dheight ~ mheight, data = Heights)
+residualPlot(lm(dheight ~ mheight, Heights))
+```
+
+
+```{r}
+# More R commands go here.
+#   The default size of a graph is quite large
+#   You can adjust out.width, fig.height, and fig.width to make graphs look better. 
+#   for a graph with two side-by-side panels, try {r fig.height=4}.
+```
+
+* Draw conclusions.
+
+* Intersperse R code chunks with explanatory text as needed.
+
+* If you know LaTeX, you can add equations, either inline, $y_i = \beta_0 + \beta_1x_i + \epsilon_i$, or displayed,
+$$y_i = \beta_0 + \beta_1x_i + \epsilon_i\mbox{, } i=1,\ldots, n$$
+
+* Repeat for additional problems.
+
+
+* Press the Knit HTML button in the toolbar to process the .rmd file into an .html file.
+
+* Either print, submit electronically, or link to the html file as your homework assignment.
+
+* For more information on using R Markdown in RStudio press the ? button in the toolbar
+or, for more detail, visit <http://rmarkdown.rstudio.com/>.
