@@ -1,7 +1,7 @@
 #  Code in the alr4 package
 #  December 12, 2012
 #  Revised July 1, 2013
- 
+
 alr4Web <-
 function (page = c("webpage", "errata", "primer", "solutions"))
 {
@@ -13,7 +13,7 @@ function (page = c("webpage", "errata", "primer", "solutions"))
         primer    = paste(site, "/links/alrprimer.pdf", sep=""),
         solutions = paste(site, "/links/alrsolutions.pdf", sep=""))
     url <- urls[page]
-    browseURL(url)
+    utils::browseURL(url)
 }
 
 
